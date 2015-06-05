@@ -1,0 +1,333 @@
+/*
+/////////////
+Setup
+/////////////
+*/
+
+body {
+background: #8DD196;
+}
+
+#container {
+    color: white;
+    width: 100%;
+}
+
+.header,
+.greeting h2,
+.greeting h4,
+.header p{
+    text-align: center;
+}
+
+/*
+/////////////
+Header
+/////////////
+*/
+
+.header {
+    background: #8DD196;
+    margin-top: 0.3em;
+    width: 100%;
+}
+
+.header h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+/*
+/////////////
+Navigation
+/////////////
+*/
+#menu {
+    display: block;
+    cursor: pointer;
+    font-size:1.4em;
+    margin-top: 0;
+    position: absolute;
+    right: 0.2em;
+    top: 0em;
+    text-align: left;
+    width:10%;
+}
+#menu h1 {
+    font-weight: 800;
+}
+#nav.hidden {
+    display: none;
+}
+#nav {
+    list-style:none;
+}
+#nav li {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+#nav a {
+    color: white;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+
+
+/*
+/////////////
+Greeting
+/////////////
+*/
+.content img.prof {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+.content img.imgbg {
+    display: none;
+}
+.greeting {
+    margin-top: 1em;
+    width: 100%;
+}
+.greeting h4{
+    line-height: 0.5em;
+}
+
+
+
+/*
+/////////////
+Bio
+/////////////
+*/
+.bio {
+    color: #444;
+    background: white;
+    font-size: 0.8em;
+    padding: 1em 1%;
+}
+
+.bio p{
+    font-size: 1.3em;
+    margin: 0 auto;
+    padding: 0.7em 1.5em;
+    text-align: left;
+    width: 80%;
+}
+.bio hr {
+    background: #333;
+    border-radius: 15px;
+    height: 10px;
+    margin: 1em auto 1.5em auto;
+    width: 80%;
+}
+
+.imgPH {
+    border: 15px solid #333;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+
+/*
+/////////////
+Footer
+/////////////
+*/
+.footer p,
+.footer h2,
+.footer h4,
+.mainContactForm {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer p {
+    font-size: 1.04em;
+    padding: 0.7em;
+    text-align: left;
+}
+.footer h2 {
+    text-align: center;
+}
+.footer h4 {
+    text-align: center;
+}
+
+.footer hr {
+    background: #fff;
+    border-radius: 15px;
+    height: 10px;
+    margin: 1.5em auto 1.5em auto;
+    width: 80%;
+}
+
+.mainContactForm input[type=text],
+.mainContactForm textarea{
+    color: #444;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.mainContactForm textarea {
+    height: 100px;
+}
+
+.mainContactForm p {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContactForm input[type=submit] {
+    border: 2px solid white;
+    color: white;
+    display: block;
+    margin: 1em auto;
+    width: 50%;
+}
+
+/*
+/////////////
+Media Queries
+/////////////
+*/
+@media screen and (max-width: 320px) {
+    #container {
+        width: 320px;
+    }
+    .header h1 { /*sets logo a bit to the left to not interfere with the hamburger as much. Otherwise logo is center before main break*/
+        position: relative;
+        left: -20px;
+    }
+    #menu h1 { /*sets hamburger a bit to the right to not interfere with the logo as much.*/
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    #container img.prof {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .greeting h2 {
+        font-size: 3em;
+    }
+    .greeting p {
+        margin-bottom: 0.5em;
+    }
+}
+
+
+
+/*
+////////////////////
+////////////////////
+/*This media query constitutes the switch to the desktop layout. 
+  Therefore, much repositioning has been applied
+////////////////////
+////////////////////*/
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+    
+    #container img.prof {
+        display: none;
+    }
+/*change background to image*/
+    .content img.imgbg {
+        display: block;
+        width: 100%;
+    }
+/*
+    #fold {
+    background: url(opt1.jpg) center  no-repeat;
+    background-size: cover;
+    position: absolute;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin-top: 100%;
+    }
+*/
+    
+/*adjust header layout*/
+.header {
+    margin-top: 0.5em;
+}
+.header h1 {
+    float: left;
+    font-size: 2.5em;
+    margin: -0.1em 0 0 3%;
+    text-align: left;
+}
+
+#nav {
+    float: right;
+    margin: 0.3em 2em 0 0;
+    width: 55%;
+    text-align: right;
+}
+    
+#nav li {
+    display: inline;
+    margin-top: 1.6em;
+    padding: 2em 1em;
+    width: 20%;
+}
+
+/*adjust content layout*/
+.content {
+    clear: both;
+}
+
+.greeting h2,
+.greeting h4{
+    position: absolute;
+    width: auto;
+    z-index: 5;
+}
+.greeting h2 {
+    font-size: 4em;
+    font-weight: 400;
+    left: 10%;
+    top: 45%;
+}
+.greeting h4 {
+    left: 10%;
+    top: 58%;
+}
+    
+#fold{
+    position: absolute;
+    top: 100%;
+}
+    
+.footer h2 {
+    text-align: left;
+}
+
+
+@media screen and (min-width: 980px) {
+    .bio p {
+        font-size: 1.5em;
+    }
+    .footer p {
+        font-size: 1.3em;
+    }
+    .mainContactForm input[type=text] {
+        height: 45px;
+    }
+}
